@@ -1,82 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>2048(非原创)</title>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0063)http://www.17sucai.com/preview/23564/2014-05-15/2048/index.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    
-    <meta charset="utf-8">
-    <title>2048</title>
-    <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
-	<link rel="stylesheet" href="./data/style.css">
+  <link href="style/main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="meta/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="meta/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, target-densitydpi=160dpi, initial-scale=1.0, maximum-scale=1, user-scalable=no, minimal-ui">
 </head>
 <body>
-<div class="container">
+  <div class="container">
     <div class="heading">
-        <h1 class="title">2048</h1>
-        <div class="scores-container">
-            <div class="score-container">104<div class="score-addition">+24</div></div>
-            <div class="best-container">1420</div>
-        </div>
+      <h1 class="title">2048</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
     </div>
+
     <div class="above-game">
-        <a class="restart-button">New Game</a>
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <a class="restart-button">New Game</a>
     </div>
+
     <div class="game-container">
-        <div class="game-message">
-            <p>
-            </p>
-            <div class="lower">
-                <a class="keep-playing-button">Keep going</a>
-                <a class="retry-button">Try again</a>
-                <div class="score-sharing"></div>
-            </div>
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
         </div>
-        <div class="grid-container">
-            <div class="grid-row">
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-            </div>
-            <div class="grid-row">
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-            </div>
-            <div class="grid-row">
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-            </div>
-            <div class="grid-row">
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-                <div class="grid-cell">
-                </div>
-            </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
         </div>
-        <div class="tile-container"><div class="tile tile-2 tile-position-1-1"><div class="tile-inner">2</div></div><div class="tile tile-8 tile-position-1-2"><div class="tile-inner">6</div></div><div class="tile tile-8 tile-position-1-2"><div class="tile-inner">6</div></div><div class="tile tile-16 tile-position-1-2 tile-merged"><div class="tile-inner">8</div></div><div class="tile tile-16 tile-position-1-3"><div class="tile-inner">8</div></div><div class="tile tile-2 tile-position-1-4"><div class="tile-inner">2</div></div><div class="tile tile-4 tile-position-2-1"><div class="tile-inner">4</div></div><div class="tile tile-4 tile-position-2-1"><div class="tile-inner">4</div></div><div class="tile tile-8 tile-position-2-1 tile-merged"><div class="tile-inner">6</div></div><div class="tile tile-2 tile-position-3-1"><div class="tile-inner">2</div></div><div class="tile tile-2 tile-position-3-3 tile-new"><div class="tile-inner">2</div></div></div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
     </div>
- 
-	<p>（↑↓←→） 键盘上下左右按键，开始游戏</p>
-    <script src="./data/bind_polyfill.js"></script>
- <div class="text" style=" text-align:center;"><font face="STKaiti" size="5" color="#66CCFF">本游戏源码提供者并非此网页开发者<font face="STKaiti" size="5" color="#1C8BFF">QwQ_Auto_Machine</font>, 源代码来源于<a
-            href="https://blog.csdn.net/llqqxf/article/details/52277475">https://blog.csdn.net/llqqxf/article/details/52277475</a></font></div>
-</div></body></html>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+    <p>
+    <strong class="important">Note:</strong> This site is the official version of 2048. You can play it on your phone via <a href="http://git.io/2048">http://git.io/2048.</a> All other apps or sites are derivatives or fakes, and should be used with caution.
+    </p>
+    <hr>
+    <p>
+    Created by <a href="http://gabrielecirulli.com" target="_blank">Gabriele Cirulli.</a> Based on <a href="https://itunes.apple.com/us/app/1024!/id823499224" target="_blank">1024 by Veewo Studio</a> and conceptually similar to <a href="http://asherv.com/threes/" target="_blank">Threes by Asher Vollmer.</a>
+    </p>
+    <p>
+    楼上正解qwq
+    </p>
+  </div>
+
+  <script src="js/bind_polyfill.js"></script>
+  <script src="js/classlist_polyfill.js"></script>
+  <script src="js/animframe_polyfill.js"></script>
+  <script src="js/keyboard_input_manager.js"></script>
+  <script src="js/html_actuator.js"></script>
+  <script src="js/grid.js"></script>
+  <script src="js/tile.js"></script>
+  <script src="js/local_storage_manager.js"></script>
+  <script src="js/game_manager.js"></script>
+  <script src="js/application.js"></script>
+</body>
+</html>
